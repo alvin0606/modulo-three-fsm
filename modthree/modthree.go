@@ -1,9 +1,10 @@
 package modthree
 
 import (
-	"assessment/fsm"
 	"fmt"
 	"strings"
+
+	"assessment/fsm"
 )
 
 // States for the mod-3 FSM.
@@ -57,6 +58,7 @@ func ModThree(input string) (int, error) {
 	case S2:
 		return 2, nil
 	default:
+		// Defensive: should never happen with current FSM
 		return -1, fmt.Errorf("unknown final state: %s", final)
 	}
 }

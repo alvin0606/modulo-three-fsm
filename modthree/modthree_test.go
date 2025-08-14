@@ -1,9 +1,10 @@
 package modthree
 
 import (
-	"assessment/fsm"
 	"errors"
 	"testing"
+
+	"assessment/fsm"
 )
 
 // Test basic correct cases for ModThree.
@@ -12,14 +13,14 @@ func TestModThree_BasicCases(t *testing.T) {
 		in   string
 		want int
 	}{
-		{"1101", 1}, // 13 % 3 = 1
-		{"1110", 2}, // 14 % 3 = 2
-		{"1111", 0}, // 15 % 3 = 0
-		{"", 0},     // empty stays at S0
+		{"1101", 1},
+		{"1110", 2},
+		{"1111", 0},
+		{"", 0}, // empty stays at S0
 		{"0", 0},
 		{"1", 1},
-		{"10", 2}, // 2 % 3 = 2
-		{"11", 0}, // 3 % 3 = 0
+		{"10", 2},
+		{"11", 0},
 		{"01", 1}, // check MSB-first
 		{"10", 2},
 	}

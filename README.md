@@ -42,7 +42,7 @@ It is structured as a reusable FSM library plus a concrete “mod-3” example a
    ```
 3. Results:
    ```text
-   ok      assessment/cmd/modthree      coverage: 89.7% of statements
+   ok      assessment/cmd/modthree      coverage: 90.0% of statements
    ok      assessment/fsm               coverage: 95.9% of statements
    ok      assessment/modthree          coverage: 95.8% of statements
    ```

@@ -43,7 +43,7 @@ func TestRun_Valid_NoSpaces(t *testing.T) {
 	}
 }
 
-func TestRun_Valid_TrimSpacesInValue(t *testing.T) {
+func TestRun_Valid_TrimSpacesInQuotedValue(t *testing.T) {
 	stdout, stderr, code := runWith("-in=   1101   ")
 	if code != ExitOK {
 		t.Fatalf("exit=%d, want %d, stderr=%q", code, ExitOK, stderr)

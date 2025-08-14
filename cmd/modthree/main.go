@@ -1,13 +1,14 @@
 package main
 
 import (
-	"assessment/modthree"
 	"errors"
 	"flag"
 	"fmt"
 	"io"
 	"os"
 	"strings"
+
+	"assessment/modthree"
 )
 
 // Exit codes
@@ -36,6 +37,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 	fs := flag.NewFlagSet("modthree", flag.ContinueOnError)
 	fs.SetOutput(stderr)
 	fs.Usage = func() {
+		// Custom usage output for consistent help format
 		_, _ = fmt.Fprintln(stderr, "Usage: modthree -in=<binary>")
 		_, _ = fmt.Fprintln(stderr, "  Accepts only -in=<binary> (no space between -in and value)")
 		_, _ = fmt.Fprintln(stderr, "  If value is quoted, leading/trailing spaces are trimmed")
