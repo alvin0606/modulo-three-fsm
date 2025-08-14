@@ -219,6 +219,19 @@ func TestRun_EmptySeq_StayAtStart(t *testing.T) {
 	}
 }
 
+func TestRun_EmptySeq_StartIsAccepting(t *testing.T) {
+	f := NewFSM("S0")
+	f.AddState("S0", true)
+	f.AddSymbol('0')
+
+	if _, err := f.Run(nil); err != nil {
+		t.Fatal(err)
+	}
+	if !f.Accepting() {
+		t.Fatal("start is final, should be accepting with empty input")
+	}
+}
+
 //
 // IsFinal
 //

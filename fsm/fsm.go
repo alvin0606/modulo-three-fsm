@@ -70,7 +70,7 @@ func (f *FSM) AddTransition(from State, symbol rune, to State) error {
 	}
 	s := Symbol(symbol)
 	if _, ok := f.alphabet[s]; !ok {
-		return fmt.Errorf("symbol %q not in alphabet", rune(symbol))
+		return fmt.Errorf("symbol %q not in alphabet", symbol)
 	}
 	if _, ok := f.trans[from]; !ok {
 		f.trans[from] = make(map[Symbol]State)
