@@ -60,3 +60,13 @@ It is structured as a reusable FSM library plus a concrete “mod-3” example a
    ```text
    modThree("1101") => 1
    ```
+
+## Exit Codes
+
+The CLI returns the following exit codes:
+
+| Code | Meaning                                         |
+|------|-------------------------------------------------|
+| 0    | Success — input processed and result printed    |
+| 1    | Runtime error — processing failed               |
+| 2    | Invalid arguments — CLI usage or input error    |
